@@ -1,0 +1,38 @@
+// requires esp-idf v6.0.x
+#define CONFIG_WIFI_RMT_STATIC_RX_BUFFER_NUM 10
+#define CONFIG_WIFI_RMT_DYNAMIC_RX_BUFFER_NUM 32
+#define CONFIG_WIFI_RMT_TX_BUFFER_TYPE 1
+#define CONFIG_WIFI_RMT_DYNAMIC_RX_BUFFER_NUM 32
+#define CONFIG_WIFI_RMT_DYNAMIC_RX_MGMT_BUF 0
+#define CONFIG_WIFI_RMT_ESPNOW_MAX_ENCRYPT_NUM 7
+#define CONFIG_WIFI_RMT_STATIC_TX_BUFFER_NUM 16
+#define CONFIG_WIFI_RMT_CACHE_TX_BUFFER_NUM 32
+#define BUILD_ESP32
+
+#define PSRAM_ALLOC_LEN (10 * 1024 * 1024)
+
+// XXX: ld reports "error: Total discarded sections size is X bytes"
+//#define IRAM_ATTR_CPU_EXEC1 IRAM_ATTR
+#define IRAM_ATTR_CPU_EXEC1
+
+#define BPP 16
+#define FULL_UPDATE
+#define NN 24
+
+// LCD MODED
+#define USE_LCD_EK79007
+#define LCD_RST 27
+#define LCD_WIDTH 1024
+#define LCD_HEIGHT 600
+#define LCD_BL 20
+#define LCD_UPDN 26
+#define LCD_SHLR 27
+
+#define SD_CLK 43
+#define SD_CMD 44
+#define SD_D0 39
+#define SD_D1 40
+#define SD_D2 41
+#define SD_D3 42
+#define SD_PWR_CTRL_LDO_IO_ID 4
+
